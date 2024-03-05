@@ -66,7 +66,6 @@ Check_for_airlines_file = WasbBlobSensor(
     )
 
 
-
 blob_to_snowflake_stg = SnowflakeOperator(
                 task_id = 'blob_to_snowflake_stg',
                 snowflake_conn_id = 'snowflake_conn_id',
