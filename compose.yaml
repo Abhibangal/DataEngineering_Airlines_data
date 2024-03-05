@@ -1,0 +1,21 @@
+services:
+  sleek-airflow:
+    image: airlines_etl_pipeline:latest
+
+    volumes:
+      - ./airflow:/opt/airflow
+
+    ports:
+      - "8080:8080"
+    
+    environment:
+      &airflow-common-env
+      AIRFLOW__EMAIL__EMAIL_BACKEND: airflow.utils.email.send_email_smtp
+      AIRFLOW__SMTP__SMTP_HOST : smtp.gmail.com
+      AIRFLOW__SMTP__SMTP_STARTTLS: TRUE
+      AIRFLOW__SMTP__SMTP_SSL: FALSE
+      AIRFLOW__SMTP__SMTP_USER : abhihot9@gmail.com
+      AIRFLOW__SMTP__SMTP_PASSWORDS : dnxt oxik ywec mcll
+      AIRFLOW__SMTP__SMTP_PORT : 587
+      AIRFLOW__SMTP__SMTP_MAIL_FROM : abhihot9@gmail.com
+    command: airflow standalone

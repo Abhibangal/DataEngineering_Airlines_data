@@ -1,0 +1,91 @@
+[2024-02-28T12:29:12.531+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: AIRLINES_ETL_PIPELINE.ADF_pipeline manual__2024-02-28T12:28:47.578520+00:00 [queued]>
+[2024-02-28T12:29:12.546+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: AIRLINES_ETL_PIPELINE.ADF_pipeline manual__2024-02-28T12:28:47.578520+00:00 [queued]>
+[2024-02-28T12:29:12.546+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-02-28T12:29:12.602+0000] {taskinstance.py:2214} INFO - Executing <Task(AzureDataFactoryRunPipelineOperator): ADF_pipeline> on 2024-02-28 12:28:47.578520+00:00
+[2024-02-28T12:29:12.610+0000] {standard_task_runner.py:60} INFO - Started process 1135 to run task
+[2024-02-28T12:29:12.614+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'AIRLINES_ETL_PIPELINE', 'ADF_pipeline', 'manual__2024-02-28T12:28:47.578520+00:00', '--job-id', '84', '--raw', '--subdir', 'DAGS_FOLDER/AIRLINES_DATA_ETL_DAG.py', '--cfg-path', '/tmp/tmpdj_vj561']
+[2024-02-28T12:29:12.617+0000] {standard_task_runner.py:88} INFO - Job 84: Subtask ADF_pipeline
+[2024-02-28T12:29:12.720+0000] {task_command.py:423} INFO - Running <TaskInstance: AIRLINES_ETL_PIPELINE.ADF_pipeline manual__2024-02-28T12:28:47.578520+00:00 [running]> on host c262eab4accf
+[2024-02-28T12:29:12.912+0000] {taskinstance.py:2510} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='AIRLINES_ETL_PIPELINE' AIRFLOW_CTX_TASK_ID='ADF_pipeline' AIRFLOW_CTX_EXECUTION_DATE='2024-02-28T12:28:47.578520+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-02-28T12:28:47.578520+00:00'
+[2024-02-28T12:29:12.914+0000] {data_factory.py:168} INFO - Executing the mysql_to_blob pipeline.
+[2024-02-28T12:29:12.923+0000] {connection.py:269} WARNING - Connection schemes (type: azure_data_factory) shall not contain '_' according to RFC3986.
+[2024-02-28T12:29:12.924+0000] {base.py:83} INFO - Using connection ID 'azure_data_factory' for task execution.
+[2024-02-28T12:29:12.960+0000] {_universal.py:514} INFO - Request URL: 'https://login.microsoftonline.com/740d81d4-e4d6-4689-8d63-22257ff4a74c/v2.0/.well-known/openid-configuration'
+Request method: 'GET'
+Request headers:
+    'User-Agent': 'azsdk-python-identity/1.15.0 Python/3.11.8 (Linux-5.15.133.1-microsoft-standard-WSL2-x86_64-with-glibc2.36)'
+No body was attached to the request
+[2024-02-28T12:29:13.319+0000] {_universal.py:550} INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'max-age=86400, private'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'Access-Control-Allow-Origin': 'REDACTED'
+    'Access-Control-Allow-Methods': 'REDACTED'
+    'P3P': 'REDACTED'
+    'x-ms-request-id': '6e53632d-a1e5-4dce-a522-683ed5a2a300'
+    'x-ms-ests-server': 'REDACTED'
+    'X-XSS-Protection': 'REDACTED'
+    'Set-Cookie': 'REDACTED'
+    'Date': 'Wed, 28 Feb 2024 12:29:13 GMT'
+    'Content-Length': '1753'
+[2024-02-28T12:29:13.330+0000] {_universal.py:511} INFO - Request URL: 'https://login.microsoftonline.com/740d81d4-e4d6-4689-8d63-22257ff4a74c/oauth2/v2.0/token'
+Request method: 'POST'
+Request headers:
+    'Accept': 'application/json'
+    'x-client-sku': 'REDACTED'
+    'x-client-ver': 'REDACTED'
+    'x-client-os': 'REDACTED'
+    'x-ms-lib-capability': 'REDACTED'
+    'client-request-id': 'REDACTED'
+    'x-client-current-telemetry': 'REDACTED'
+    'x-client-last-telemetry': 'REDACTED'
+    'User-Agent': 'azsdk-python-identity/1.15.0 Python/3.11.8 (Linux-5.15.133.1-microsoft-standard-WSL2-x86_64-with-glibc2.36)'
+A body is sent with the request
+[2024-02-28T12:29:13.572+0000] {_universal.py:550} INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-store, no-cache'
+    'Pragma': 'no-cache'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'P3P': 'REDACTED'
+    'client-request-id': 'REDACTED'
+    'x-ms-request-id': 'c3684e56-0c38-493c-8a4d-2b3d0f34a500'
+    'x-ms-ests-server': 'REDACTED'
+    'x-ms-clitelem': 'REDACTED'
+    'X-XSS-Protection': 'REDACTED'
+    'Set-Cookie': 'REDACTED'
+    'Date': 'Wed, 28 Feb 2024 12:29:13 GMT'
+    'Content-Length': '1387'
+[2024-02-28T12:29:13.575+0000] {get_token_mixin.py:93} INFO - ClientSecretCredential.get_token succeeded
+[2024-02-28T12:29:13.576+0000] {_universal.py:514} INFO - Request URL: 'https://management.azure.com/subscriptions/3958bfc8-c367-4842-ba17-75d61ba036ff/resourceGroups/databricks_course_rg/providers/Microsoft.DataFactory/factories/ADFSQL2ICEBERG/pipelines/mysql_to_blob/createRun?api-version=REDACTED'
+Request method: 'POST'
+Request headers:
+    'Content-Type': 'application/json'
+    'Accept': 'application/json'
+    'x-ms-client-request-id': 'facf3852-d634-11ee-97a1-0242ac160002'
+    'User-Agent': 'azsdk-python-mgmt-datafactory/5.0.0 Python/3.11.8 (Linux-5.15.133.1-microsoft-standard-WSL2-x86_64-with-glibc2.36)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+[2024-02-28T12:29:14.470+0000] {_universal.py:550} INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Content-Length': '53'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-writes': '1199'
+    'x-ms-request-id': '5aefa3ed-643c-4f57-b28e-9d7d07281a7b'
+    'x-ms-routing-request-id': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'X-Cache': 'REDACTED'
+    'X-MSEdge-Ref': 'REDACTED'
+    'Date': 'Wed, 28 Feb 2024 12:29:14 GMT'
+[2024-02-28T12:29:14.536+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=AIRLINES_ETL_PIPELINE, task_id=ADF_pipeline, execution_date=20240228T122847, start_date=20240228T122912, end_date=20240228T122914
+[2024-02-28T12:29:14.643+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-02-28T12:29:14.693+0000] {taskinstance.py:3309} INFO - 1 downstream tasks scheduled from follow-on schedule check

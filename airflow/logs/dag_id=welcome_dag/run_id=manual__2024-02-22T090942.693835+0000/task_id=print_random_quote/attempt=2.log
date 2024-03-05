@@ -1,0 +1,24 @@
+[2024-02-22T09:13:48.810+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: welcome_dag.print_random_quote manual__2024-02-22T09:09:42.693835+00:00 [queued]>
+[2024-02-22T09:13:48.826+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: welcome_dag.print_random_quote manual__2024-02-22T09:09:42.693835+00:00 [queued]>
+[2024-02-22T09:13:48.827+0000] {taskinstance.py:2170} INFO - Starting attempt 2 of 2
+[2024-02-22T09:13:49.090+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): print_random_quote> on 2024-02-22 09:09:42.693835+00:00
+[2024-02-22T09:13:49.100+0000] {standard_task_runner.py:60} INFO - Started process 302 to run task
+[2024-02-22T09:13:49.105+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'welcome_dag', 'print_random_quote', 'manual__2024-02-22T09:09:42.693835+00:00', '--job-id', '28', '--raw', '--subdir', 'DAGS_FOLDER/welcome_dag.py', '--cfg-path', '/tmp/tmp1w15b43h']
+[2024-02-22T09:13:49.108+0000] {standard_task_runner.py:88} INFO - Job 28: Subtask print_random_quote
+[2024-02-22T09:13:49.703+0000] {task_command.py:423} INFO - Running <TaskInstance: welcome_dag.print_random_quote manual__2024-02-22T09:09:42.693835+00:00 [running]> on host 6281687bcd05
+[2024-02-22T09:13:50.037+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='welcome_dag' AIRFLOW_CTX_TASK_ID='print_random_quote' AIRFLOW_CTX_EXECUTION_DATE='2024-02-22T09:09:42.693835+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-02-22T09:09:42.693835+00:00'
+[2024-02-22T09:13:50.038+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 199, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 216, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/welcome_dag.py", line 18, in print_random_quote
+    quote_api= {var.value.get('quote_api')}
+NameError: name 'var' is not defined
+[2024-02-22T09:13:50.053+0000] {taskinstance.py:1138} INFO - Marking task as FAILED. dag_id=welcome_dag, task_id=print_random_quote, execution_date=20240222T090942, start_date=20240222T091348, end_date=20240222T091350
+[2024-02-22T09:13:50.462+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 28 for task print_random_quote (name 'var' is not defined; 302)
+[2024-02-22T09:13:50.487+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-02-22T09:13:50.590+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

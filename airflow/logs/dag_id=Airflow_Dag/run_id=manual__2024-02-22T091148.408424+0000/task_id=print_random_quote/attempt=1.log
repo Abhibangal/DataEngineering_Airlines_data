@@ -1,0 +1,14 @@
+[2024-02-22T09:12:09.912+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Airflow_Dag.print_random_quote manual__2024-02-22T09:11:48.408424+00:00 [queued]>
+[2024-02-22T09:12:09.929+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Airflow_Dag.print_random_quote manual__2024-02-22T09:11:48.408424+00:00 [queued]>
+[2024-02-22T09:12:09.929+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2024-02-22T09:12:10.127+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): print_random_quote> on 2024-02-22 09:11:48.408424+00:00
+[2024-02-22T09:12:10.137+0000] {standard_task_runner.py:60} INFO - Started process 266 to run task
+[2024-02-22T09:12:10.142+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'Airflow_Dag', 'print_random_quote', 'manual__2024-02-22T09:11:48.408424+00:00', '--job-id', '25', '--raw', '--subdir', 'DAGS_FOLDER/airflow_dag.py', '--cfg-path', '/tmp/tmp4ng78lrr']
+[2024-02-22T09:12:10.144+0000] {standard_task_runner.py:88} INFO - Job 25: Subtask print_random_quote
+[2024-02-22T09:12:10.355+0000] {task_command.py:423} INFO - Running <TaskInstance: Airflow_Dag.print_random_quote manual__2024-02-22T09:11:48.408424+00:00 [running]> on host 6281687bcd05
+[2024-02-22T09:12:10.840+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='Airflow_Dag' AIRFLOW_CTX_TASK_ID='print_random_quote' AIRFLOW_CTX_EXECUTION_DATE='2024-02-22T09:11:48.408424+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-02-22T09:11:48.408424+00:00'
+[2024-02-22T09:12:11.826+0000] {logging_mixin.py:188} INFO - Quote of the day: "To fly as fast as thought, you must begin by knowing that you have already arrived."
+[2024-02-22T09:12:11.828+0000] {python.py:201} INFO - Done. Returned value was: None
+[2024-02-22T09:12:11.855+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=Airflow_Dag, task_id=print_random_quote, execution_date=20240222T091148, start_date=20240222T091209, end_date=20240222T091211
+[2024-02-22T09:12:12.247+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-02-22T09:12:12.276+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

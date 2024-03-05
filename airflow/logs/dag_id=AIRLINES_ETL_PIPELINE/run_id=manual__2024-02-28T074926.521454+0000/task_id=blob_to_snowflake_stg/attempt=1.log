@@ -1,0 +1,58 @@
+[2024-02-28T07:49:31.903+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: AIRLINES_ETL_PIPELINE.blob_to_snowflake_stg manual__2024-02-28T07:49:26.521454+00:00 [queued]>
+[2024-02-28T07:49:31.920+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: AIRLINES_ETL_PIPELINE.blob_to_snowflake_stg manual__2024-02-28T07:49:26.521454+00:00 [queued]>
+[2024-02-28T07:49:31.920+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-02-28T07:49:32.263+0000] {taskinstance.py:2214} INFO - Executing <Task(SnowflakeOperator): blob_to_snowflake_stg> on 2024-02-28 07:49:26.521454+00:00
+[2024-02-28T07:49:32.272+0000] {standard_task_runner.py:60} INFO - Started process 233 to run task
+[2024-02-28T07:49:32.275+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'AIRLINES_ETL_PIPELINE', 'blob_to_snowflake_stg', 'manual__2024-02-28T07:49:26.521454+00:00', '--job-id', '82', '--raw', '--subdir', 'DAGS_FOLDER/AIRLINES_DATA_ETL_DAG.py', '--cfg-path', '/tmp/tmp7o1m7wqe']
+[2024-02-28T07:49:32.277+0000] {standard_task_runner.py:88} INFO - Job 82: Subtask blob_to_snowflake_stg
+[2024-02-28T07:49:32.530+0000] {task_command.py:423} INFO - Running <TaskInstance: AIRLINES_ETL_PIPELINE.blob_to_snowflake_stg manual__2024-02-28T07:49:26.521454+00:00 [running]> on host c262eab4accf
+[2024-02-28T07:49:33.436+0000] {taskinstance.py:2510} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='AIRLINES_ETL_PIPELINE' AIRFLOW_CTX_TASK_ID='blob_to_snowflake_stg' AIRFLOW_CTX_EXECUTION_DATE='2024-02-28T07:49:26.521454+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-02-28T07:49:26.521454+00:00'
+[2024-02-28T07:49:33.437+0000] {sql.py:276} INFO - Executing: Truncate table TEST_ANALYTICS.AIRLINES.airlines_stg;
+copy into TEST_ANALYTICS.AIRLINES.airlines_stg from 
+                                @TEST_ANALYTICS.AIRLINES.TEST_AIRLINES_BLOB_STG/Airlines_Data.csv.gz
+                                            file_format = 'TEST_ANALYTICS.AIRLINES.AIRLINES_CSV_FORMAT',
+                                            ON_ERROR = ABORT_STATEMENT ,
+                                            force = FALSE;
+                                            
+COMMIT;
+[2024-02-28T07:49:33.450+0000] {base.py:83} INFO - Using connection ID 'snowflake_conn_id' for task execution.
+[2024-02-28T07:49:33.526+0000] {base.py:83} INFO - Using connection ID 'snowflake_conn_id' for task execution.
+[2024-02-28T07:49:33.526+0000] {connection.py:386} INFO - Snowflake Connector for Python Version: 3.7.1, Python Version: 3.11.8, Platform: Linux-5.15.133.1-microsoft-standard-WSL2-x86_64-with-glibc2.36
+[2024-02-28T07:49:33.527+0000] {connection.py:1211} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2024-02-28T07:49:34.283+0000] {cursor.py:1032} INFO - query: [ALTER SESSION SET autocommit=False]
+[2024-02-28T07:49:34.374+0000] {cursor.py:1045} INFO - query execution done
+[2024-02-28T07:49:34.376+0000] {cursor.py:1205} INFO - Number of results in first chunk: 1
+[2024-02-28T07:49:34.378+0000] {sql.py:457} INFO - Running statement: Truncate table TEST_ANALYTICS.AIRLINES.airlines_stg;, parameters: None
+[2024-02-28T07:49:34.379+0000] {cursor.py:1032} INFO - query: [Truncate table TEST_ANALYTICS.AIRLINES.airlines_stg;]
+[2024-02-28T07:49:35.091+0000] {cursor.py:1045} INFO - query execution done
+[2024-02-28T07:49:35.094+0000] {cursor.py:1205} INFO - Number of results in first chunk: 1
+[2024-02-28T07:49:35.096+0000] {sql.py:466} INFO - Rows affected: 1
+[2024-02-28T07:49:35.137+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.11/site-packages/airflow/providers/snowflake/hooks/snowflake.py:393 AirflowProviderDeprecationWarning: Call to deprecated method _make_common_data_structure. (The `_make_serializable` method is deprecated and support will be removed in a future version of the common.sql provider. Please update the DbApiHook's provider to a version based on common.sql >= 1.9.1.)
+[2024-02-28T07:49:35.138+0000] {snowflake.py:402} INFO - Rows affected: 1
+[2024-02-28T07:49:35.139+0000] {snowflake.py:403} INFO - Snowflake query id: 01b2a5f5-0001-18d1-0000-000393fa707d
+[2024-02-28T07:49:35.139+0000] {sql.py:457} INFO - Running statement: copy into TEST_ANALYTICS.AIRLINES.airlines_stg from 
+                                @TEST_ANALYTICS.AIRLINES.TEST_AIRLINES_BLOB_STG/Airlines_Data.csv.gz
+                                            file_format = 'TEST_ANALYTICS.AIRLINES.AIRLINES_CSV_FORMAT',
+                                            ON_ERROR = ABORT_STATEMENT ,
+                                            force = FALSE;, parameters: None
+[2024-02-28T07:49:35.140+0000] {cursor.py:1032} INFO - query: [copy into TEST_ANALYTICS.AIRLINES.airlines_stg from @TEST_ANALYTICS.AIRLINES.TES...]
+[2024-02-28T07:49:40.170+0000] {cursor.py:1045} INFO - query execution done
+[2024-02-28T07:49:40.171+0000] {cursor.py:1205} INFO - Number of results in first chunk: 1
+[2024-02-28T07:49:40.172+0000] {sql.py:466} INFO - Rows affected: 1
+[2024-02-28T07:49:40.173+0000] {snowflake.py:402} INFO - Rows affected: 1
+[2024-02-28T07:49:40.173+0000] {snowflake.py:403} INFO - Snowflake query id: 01b2a5f5-0001-18d1-0000-000393fa7081
+[2024-02-28T07:49:40.174+0000] {sql.py:457} INFO - Running statement: COMMIT;, parameters: None
+[2024-02-28T07:49:40.174+0000] {cursor.py:1032} INFO - query: [COMMIT;]
+[2024-02-28T07:49:40.471+0000] {cursor.py:1045} INFO - query execution done
+[2024-02-28T07:49:40.473+0000] {cursor.py:1205} INFO - Number of results in first chunk: 1
+[2024-02-28T07:49:40.475+0000] {sql.py:466} INFO - Rows affected: 1
+[2024-02-28T07:49:40.477+0000] {snowflake.py:402} INFO - Rows affected: 1
+[2024-02-28T07:49:40.479+0000] {snowflake.py:403} INFO - Snowflake query id: 01b2a5f5-0001-18d1-0000-000393fa7085
+[2024-02-28T07:49:40.481+0000] {cursor.py:1032} INFO - query: [COMMIT]
+[2024-02-28T07:49:40.556+0000] {cursor.py:1045} INFO - query execution done
+[2024-02-28T07:49:40.557+0000] {cursor.py:1205} INFO - Number of results in first chunk: 1
+[2024-02-28T07:49:40.558+0000] {connection.py:734} INFO - closed
+[2024-02-28T07:49:40.603+0000] {connection.py:740} INFO - No async queries seem to be running, deleting session
+[2024-02-28T07:49:41.204+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=AIRLINES_ETL_PIPELINE, task_id=blob_to_snowflake_stg, execution_date=20240228T074926, start_date=20240228T074931, end_date=20240228T074941
+[2024-02-28T07:49:41.463+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-02-28T07:49:41.479+0000] {taskinstance.py:3309} INFO - 0 downstream tasks scheduled from follow-on schedule check

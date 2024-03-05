@@ -1,0 +1,29 @@
+[2024-02-29T06:57:06.663+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: AIRLINES_ETL_PIPELINE.remove_airlines_file manual__2024-02-29T06:56:48.415625+00:00 [queued]>
+[2024-02-29T06:57:06.678+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: AIRLINES_ETL_PIPELINE.remove_airlines_file manual__2024-02-29T06:56:48.415625+00:00 [queued]>
+[2024-02-29T06:57:06.679+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-02-29T06:57:06.737+0000] {taskinstance.py:2214} INFO - Executing <Task(WasbDeleteBlobOperator): remove_airlines_file> on 2024-02-29 06:56:48.415625+00:00
+[2024-02-29T06:57:06.743+0000] {standard_task_runner.py:60} INFO - Started process 236 to run task
+[2024-02-29T06:57:06.746+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'AIRLINES_ETL_PIPELINE', 'remove_airlines_file', 'manual__2024-02-29T06:56:48.415625+00:00', '--job-id', '105', '--raw', '--subdir', 'DAGS_FOLDER/AIRLINES_DATA_ETL_DAG.py', '--cfg-path', '/tmp/tmptklibehd']
+[2024-02-29T06:57:06.748+0000] {standard_task_runner.py:88} INFO - Job 105: Subtask remove_airlines_file
+[2024-02-29T06:57:06.860+0000] {task_command.py:423} INFO - Running <TaskInstance: AIRLINES_ETL_PIPELINE.remove_airlines_file manual__2024-02-29T06:56:48.415625+00:00 [running]> on host 586f09520b0e
+[2024-02-29T06:57:07.243+0000] {taskinstance.py:2510} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='AIRLINES_ETL_PIPELINE' AIRFLOW_CTX_TASK_ID='remove_airlines_file' AIRFLOW_CTX_EXECUTION_DATE='2024-02-29T06:56:48.415625+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-02-29T06:56:48.415625+00:00'
+[2024-02-29T06:57:07.244+0000] {wasb_delete_blob.py:67} INFO - Deleting blob: Airlines_Data.csv.gz
+ in wasb://raw
+[2024-02-29T06:57:07.260+0000] {base.py:83} INFO - Using connection ID 'azure_blob_storage' for task execution.
+[2024-02-29T06:57:07.440+0000] {taskinstance.py:2728} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/providers/microsoft/azure/operators/wasb_delete_blob.py", line 70, in execute
+    hook.delete_file(
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/providers/microsoft/azure/hooks/wasb.py", line 534, in delete_file
+    raise AirflowException(f"Blob(s) not found: {blob_name}")
+airflow.exceptions.AirflowException: Blob(s) not found: Airlines_Data.csv.gz
+[2024-02-29T06:57:07.445+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=AIRLINES_ETL_PIPELINE, task_id=remove_airlines_file, execution_date=20240229T065648, start_date=20240229T065706, end_date=20240229T065707
+[2024-02-29T06:57:07.512+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 105 for task remove_airlines_file (Blob(s) not found: Airlines_Data.csv.gz; 236)
+[2024-02-29T06:57:07.562+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-02-29T06:57:07.594+0000] {taskinstance.py:3309} INFO - 0 downstream tasks scheduled from follow-on schedule check

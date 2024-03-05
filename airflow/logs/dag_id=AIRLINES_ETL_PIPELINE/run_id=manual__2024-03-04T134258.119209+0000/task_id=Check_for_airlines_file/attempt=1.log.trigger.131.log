@@ -1,0 +1,130 @@
+[2024-03-04T13:43:19.798+0000] {base.py:83} INFO - Using connection ID 'azure_blob_storage' for task execution.
+[2024-03-04T13:43:19.802+0000] {_universal.py:514} INFO - Request URL: 'https://abhiformula1dl.blob.core.windows.net/raw/csv/Airlines_Data.csv.gz?sv=REDACTED&ss=REDACTED&srt=REDACTED&sp=REDACTED&se=REDACTED&st=REDACTED&spr=REDACTED&sig=REDACTED'
+Request method: 'HEAD'
+Request headers:
+    'x-ms-version': 'REDACTED'
+    'Accept': 'application/xml'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '29666694-da2d-11ee-88e0-0242ac120002'
+    'User-Agent': 'azsdk-python-storage-blob/12.19.0 Python/3.11.8 (Linux-5.15.133.1-microsoft-standard-WSL2-x86_64-with-glibc2.36)'
+No body was attached to the request
+[2024-03-04T13:43:19.981+0000] {_universal.py:550} INFO - Response status: 404
+Response headers:
+    'Transfer-Encoding': 'chunked'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '495a98e8-e01e-0047-7239-6e943a000000'
+    'x-ms-client-request-id': '29666694-da2d-11ee-88e0-0242ac120002'
+    'x-ms-version': 'REDACTED'
+    'x-ms-error-code': 'BlobNotFound'
+    'Date': 'Mon, 04 Mar 2024 13:43:19 GMT'
+[2024-03-04T13:43:19.985+0000] {wasb.py:86} INFO - Blob csv/Airlines_Data.csv.gz not available yet in container raw. Sleeping for 60.0 seconds
+[2024-03-04T13:44:20.009+0000] {_universal.py:514} INFO - Request URL: 'https://abhiformula1dl.blob.core.windows.net/raw/csv/Airlines_Data.csv.gz?sv=REDACTED&ss=REDACTED&srt=REDACTED&sp=REDACTED&se=REDACTED&st=REDACTED&spr=REDACTED&sig=REDACTED'
+Request method: 'HEAD'
+Request headers:
+    'x-ms-version': 'REDACTED'
+    'Accept': 'application/xml'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '4d4916f6-da2d-11ee-88e0-0242ac120002'
+    'User-Agent': 'azsdk-python-storage-blob/12.19.0 Python/3.11.8 (Linux-5.15.133.1-microsoft-standard-WSL2-x86_64-with-glibc2.36)'
+No body was attached to the request
+[2024-03-04T13:44:20.139+0000] {_universal.py:550} INFO - Response status: 404
+Response headers:
+    'Transfer-Encoding': 'chunked'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '7070bfa6-d01e-002e-803a-6ead76000000'
+    'x-ms-client-request-id': '4d4916f6-da2d-11ee-88e0-0242ac120002'
+    'x-ms-version': 'REDACTED'
+    'x-ms-error-code': 'BlobNotFound'
+    'Date': 'Mon, 04 Mar 2024 13:44:20 GMT'
+[2024-03-04T13:44:20.144+0000] {wasb.py:86} INFO - Blob csv/Airlines_Data.csv.gz not available yet in container raw. Sleeping for 60.0 seconds
+[2024-03-04T13:45:20.150+0000] {_universal.py:514} INFO - Request URL: 'https://abhiformula1dl.blob.core.windows.net/raw/csv/Airlines_Data.csv.gz?sv=REDACTED&ss=REDACTED&srt=REDACTED&sp=REDACTED&se=REDACTED&st=REDACTED&spr=REDACTED&sig=REDACTED'
+Request method: 'HEAD'
+Request headers:
+    'x-ms-version': 'REDACTED'
+    'Accept': 'application/xml'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '7121f35e-da2d-11ee-88e0-0242ac120002'
+    'User-Agent': 'azsdk-python-storage-blob/12.19.0 Python/3.11.8 (Linux-5.15.133.1-microsoft-standard-WSL2-x86_64-with-glibc2.36)'
+No body was attached to the request
+[2024-03-04T13:45:20.299+0000] {_universal.py:550} INFO - Response status: 404
+Response headers:
+    'Transfer-Encoding': 'chunked'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'd0090e08-901e-003f-773a-6e37c2000000'
+    'x-ms-client-request-id': '7121f35e-da2d-11ee-88e0-0242ac120002'
+    'x-ms-version': 'REDACTED'
+    'x-ms-error-code': 'BlobNotFound'
+    'Date': 'Mon, 04 Mar 2024 13:45:20 GMT'
+[2024-03-04T13:45:20.303+0000] {wasb.py:86} INFO - Blob csv/Airlines_Data.csv.gz not available yet in container raw. Sleeping for 60.0 seconds
+[2024-03-04T13:46:20.306+0000] {_universal.py:514} INFO - Request URL: 'https://abhiformula1dl.blob.core.windows.net/raw/csv/Airlines_Data.csv.gz?sv=REDACTED&ss=REDACTED&srt=REDACTED&sp=REDACTED&se=REDACTED&st=REDACTED&spr=REDACTED&sig=REDACTED'
+Request method: 'HEAD'
+Request headers:
+    'x-ms-version': 'REDACTED'
+    'Accept': 'application/xml'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '94fd2668-da2d-11ee-88e0-0242ac120002'
+    'User-Agent': 'azsdk-python-storage-blob/12.19.0 Python/3.11.8 (Linux-5.15.133.1-microsoft-standard-WSL2-x86_64-with-glibc2.36)'
+No body was attached to the request
+[2024-03-04T13:46:20.428+0000] {_universal.py:550} INFO - Response status: 404
+Response headers:
+    'Transfer-Encoding': 'chunked'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'a2f9f25f-201e-0083-593a-6ee103000000'
+    'x-ms-client-request-id': '94fd2668-da2d-11ee-88e0-0242ac120002'
+    'x-ms-version': 'REDACTED'
+    'x-ms-error-code': 'BlobNotFound'
+    'Date': 'Mon, 04 Mar 2024 13:46:20 GMT'
+[2024-03-04T13:46:20.430+0000] {wasb.py:86} INFO - Blob csv/Airlines_Data.csv.gz not available yet in container raw. Sleeping for 60.0 seconds
+[2024-03-04T13:47:20.432+0000] {_universal.py:514} INFO - Request URL: 'https://abhiformula1dl.blob.core.windows.net/raw/csv/Airlines_Data.csv.gz?sv=REDACTED&ss=REDACTED&srt=REDACTED&sp=REDACTED&se=REDACTED&st=REDACTED&spr=REDACTED&sig=REDACTED'
+Request method: 'HEAD'
+Request headers:
+    'x-ms-version': 'REDACTED'
+    'Accept': 'application/xml'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'b8d38e88-da2d-11ee-88e0-0242ac120002'
+    'User-Agent': 'azsdk-python-storage-blob/12.19.0 Python/3.11.8 (Linux-5.15.133.1-microsoft-standard-WSL2-x86_64-with-glibc2.36)'
+No body was attached to the request
+[2024-03-04T13:47:20.548+0000] {_universal.py:550} INFO - Response status: 404
+Response headers:
+    'Transfer-Encoding': 'chunked'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'b471d42b-201e-0048-613a-6ee256000000'
+    'x-ms-client-request-id': 'b8d38e88-da2d-11ee-88e0-0242ac120002'
+    'x-ms-version': 'REDACTED'
+    'x-ms-error-code': 'BlobNotFound'
+    'Date': 'Mon, 04 Mar 2024 13:47:20 GMT'
+[2024-03-04T13:47:20.559+0000] {wasb.py:86} INFO - Blob csv/Airlines_Data.csv.gz not available yet in container raw. Sleeping for 60.0 seconds
+[2024-03-04T13:48:20.559+0000] {_universal.py:514} INFO - Request URL: 'https://abhiformula1dl.blob.core.windows.net/raw/csv/Airlines_Data.csv.gz?sv=REDACTED&ss=REDACTED&srt=REDACTED&sp=REDACTED&se=REDACTED&st=REDACTED&spr=REDACTED&sig=REDACTED'
+Request method: 'HEAD'
+Request headers:
+    'x-ms-version': 'REDACTED'
+    'Accept': 'application/xml'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'dcaa52a6-da2d-11ee-88e0-0242ac120002'
+    'User-Agent': 'azsdk-python-storage-blob/12.19.0 Python/3.11.8 (Linux-5.15.133.1-microsoft-standard-WSL2-x86_64-with-glibc2.36)'
+No body was attached to the request
+[2024-03-04T13:48:20.692+0000] {_universal.py:550} INFO - Response status: 200
+Response headers:
+    'Content-Length': '851189'
+    'Content-Type': 'application/octet-stream'
+    'Last-Modified': 'Mon, 04 Mar 2024 13:47:27 GMT'
+    'Accept-Ranges': 'REDACTED'
+    'Etag': '"0x8DC3C51A17D2DAB"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'b7148a07-001e-0002-6a3a-6e41d9000000'
+    'x-ms-client-request-id': 'dcaa52a6-da2d-11ee-88e0-0242ac120002'
+    'x-ms-version': 'REDACTED'
+    'x-ms-resource-type': 'REDACTED'
+    'x-ms-creation-time': 'REDACTED'
+    'x-ms-lease-status': 'REDACTED'
+    'x-ms-lease-state': 'REDACTED'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-server-encrypted': 'REDACTED'
+    'x-ms-access-tier': 'REDACTED'
+    'x-ms-access-tier-inferred': 'REDACTED'
+    'x-ms-owner': 'REDACTED'
+    'x-ms-group': 'REDACTED'
+    'x-ms-permissions': 'REDACTED'
+    'x-ms-acl': 'REDACTED'
+    'Date': 'Mon, 04 Mar 2024 13:48:21 GMT'
+[2024-03-04T13:48:20.703+0000] {triggerer_job_runner.py:602} INFO - Trigger AIRLINES_ETL_PIPELINE/manual__2024-03-04T13:42:58.119209+00:00/Check_for_airlines_file/-1/1 (ID 1) fired: TriggerEvent<{'status': 'success', 'message': 'Blob csv/Airlines_Data.csv.gz found in container raw.'}>

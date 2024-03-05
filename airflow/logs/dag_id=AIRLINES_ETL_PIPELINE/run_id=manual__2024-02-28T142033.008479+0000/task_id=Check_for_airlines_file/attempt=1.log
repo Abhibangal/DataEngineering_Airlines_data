@@ -1,0 +1,27 @@
+[2024-02-28T14:20:52.143+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: AIRLINES_ETL_PIPELINE.Check_for_airlines_file manual__2024-02-28T14:20:33.008479+00:00 [queued]>
+[2024-02-28T14:20:52.168+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: AIRLINES_ETL_PIPELINE.Check_for_airlines_file manual__2024-02-28T14:20:33.008479+00:00 [queued]>
+[2024-02-28T14:20:52.169+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-02-28T14:20:52.234+0000] {taskinstance.py:2214} INFO - Executing <Task(WasbBlobSensor): Check_for_airlines_file> on 2024-02-28 14:20:33.008479+00:00
+[2024-02-28T14:20:52.264+0000] {standard_task_runner.py:60} INFO - Started process 1610 to run task
+[2024-02-28T14:20:52.342+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'AIRLINES_ETL_PIPELINE', 'Check_for_airlines_file', 'manual__2024-02-28T14:20:33.008479+00:00', '--job-id', '87', '--raw', '--subdir', 'DAGS_FOLDER/AIRLINES_DATA_ETL_DAG.py', '--cfg-path', '/tmp/tmp8ghq03e1']
+[2024-02-28T14:20:52.391+0000] {standard_task_runner.py:88} INFO - Job 87: Subtask Check_for_airlines_file
+[2024-02-28T14:20:53.261+0000] {task_command.py:423} INFO - Running <TaskInstance: AIRLINES_ETL_PIPELINE.Check_for_airlines_file manual__2024-02-28T14:20:33.008479+00:00 [running]> on host c262eab4accf
+[2024-02-28T14:20:58.123+0000] {taskinstance.py:2510} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='AIRLINES_ETL_PIPELINE' AIRFLOW_CTX_TASK_ID='Check_for_airlines_file' AIRFLOW_CTX_EXECUTION_DATE='2024-02-28T14:20:33.008479+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-02-28T14:20:33.008479+00:00'
+[2024-02-28T14:20:58.126+0000] {wasb.py:72} INFO - Poking for blob: csv/Airlines_Data.csv.gz
+ in wasb://raw
+[2024-02-28T14:20:58.162+0000] {base.py:83} INFO - Using connection ID 'azure_blob_storage' for task execution.
+[2024-02-28T14:20:58.625+0000] {taskinstance.py:2367} INFO - Pausing task as DEFERRED. dag_id=AIRLINES_ETL_PIPELINE, task_id=Check_for_airlines_file, execution_date=20240228T142033, start_date=20240228T142052
+[2024-02-28T14:20:58.722+0000] {local_task_job_runner.py:231} INFO - Task exited with return code 100 (task deferral)
+[2024-02-28T14:26:09.757+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: AIRLINES_ETL_PIPELINE.Check_for_airlines_file manual__2024-02-28T14:20:33.008479+00:00 [queued]>
+[2024-02-28T14:26:09.775+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: AIRLINES_ETL_PIPELINE.Check_for_airlines_file manual__2024-02-28T14:20:33.008479+00:00 [queued]>
+[2024-02-28T14:26:09.776+0000] {taskinstance.py:2191} INFO - Resuming after deferral
+[2024-02-28T14:26:09.856+0000] {taskinstance.py:2214} INFO - Executing <Task(WasbBlobSensor): Check_for_airlines_file> on 2024-02-28 14:20:33.008479+00:00
+[2024-02-28T14:26:09.864+0000] {standard_task_runner.py:60} INFO - Started process 1663 to run task
+[2024-02-28T14:26:09.874+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'AIRLINES_ETL_PIPELINE', 'Check_for_airlines_file', 'manual__2024-02-28T14:20:33.008479+00:00', '--job-id', '90', '--raw', '--subdir', 'DAGS_FOLDER/AIRLINES_DATA_ETL_DAG.py', '--cfg-path', '/tmp/tmpuvpgfxik']
+[2024-02-28T14:26:09.881+0000] {standard_task_runner.py:88} INFO - Job 90: Subtask Check_for_airlines_file
+[2024-02-28T14:26:10.063+0000] {task_command.py:423} INFO - Running <TaskInstance: AIRLINES_ETL_PIPELINE.Check_for_airlines_file manual__2024-02-28T14:20:33.008479+00:00 [running]> on host c262eab4accf
+[2024-02-28T14:26:10.505+0000] {wasb.py:110} INFO - Blob csv/Airlines_Data.csv.gz found in container raw.
+[2024-02-28T14:26:10.535+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=AIRLINES_ETL_PIPELINE, task_id=Check_for_airlines_file, execution_date=20240228T142033, start_date=20240228T142052, end_date=20240228T142610
+[2024-02-28T14:26:10.644+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-02-28T14:26:10.670+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.11/site-packages/airflow/models/baseoperator.py:1201 AirflowProviderDeprecationWarning: Call to deprecated class SnowflakeOperator. (This class is deprecated. Please use `airflow.providers.common.sql.operators.sql.SQLExecuteQueryOperator`. Also, you can provide `hook_params={'warehouse': <warehouse>, 'database': <database>, 'role': <role>, 'schema': <schema>, 'authenticator': <authenticator>,'session_parameters': <session_parameters>}`.)
+[2024-02-28T14:26:10.721+0000] {taskinstance.py:3309} INFO - 0 downstream tasks scheduled from follow-on schedule check

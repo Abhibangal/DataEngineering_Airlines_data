@@ -1,0 +1,16 @@
+[2024-02-29T14:51:12.631+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: AIRLINES_ETL_PIPELINE.remove_airlines_file manual__2024-02-29T14:44:38.677041+00:00 [queued]>
+[2024-02-29T14:51:12.645+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: AIRLINES_ETL_PIPELINE.remove_airlines_file manual__2024-02-29T14:44:38.677041+00:00 [queued]>
+[2024-02-29T14:51:12.646+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-02-29T14:51:12.744+0000] {taskinstance.py:2214} INFO - Executing <Task(WasbDeleteBlobOperator): remove_airlines_file> on 2024-02-29 14:44:38.677041+00:00
+[2024-02-29T14:51:12.750+0000] {standard_task_runner.py:60} INFO - Started process 195 to run task
+[2024-02-29T14:51:12.754+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'AIRLINES_ETL_PIPELINE', 'remove_airlines_file', 'manual__2024-02-29T14:44:38.677041+00:00', '--job-id', '129', '--raw', '--subdir', 'DAGS_FOLDER/AIRLINES_DATA_ETL_DAG.py', '--cfg-path', '/tmp/tmpvd4yf697']
+[2024-02-29T14:51:12.756+0000] {standard_task_runner.py:88} INFO - Job 129: Subtask remove_airlines_file
+[2024-02-29T14:51:12.876+0000] {task_command.py:423} INFO - Running <TaskInstance: AIRLINES_ETL_PIPELINE.remove_airlines_file manual__2024-02-29T14:44:38.677041+00:00 [running]> on host 3842d9dcfd8c
+[2024-02-29T14:51:13.227+0000] {taskinstance.py:2510} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='AIRLINES_ETL_PIPELINE' AIRFLOW_CTX_TASK_ID='remove_airlines_file' AIRFLOW_CTX_EXECUTION_DATE='2024-02-29T14:44:38.677041+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-02-29T14:44:38.677041+00:00'
+[2024-02-29T14:51:13.228+0000] {wasb_delete_blob.py:67} INFO - Deleting blob: csv/Airlines_Data.csv.gz
+ in wasb://raw
+[2024-02-29T14:51:13.239+0000] {base.py:83} INFO - Using connection ID 'azure_blob_storage' for task execution.
+[2024-02-29T14:51:13.469+0000] {wasb.py:504} INFO - Deleted blobs: ('csv/Airlines_Data.csv.gz',)
+[2024-02-29T14:51:13.487+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=AIRLINES_ETL_PIPELINE, task_id=remove_airlines_file, execution_date=20240229T144438, start_date=20240229T145112, end_date=20240229T145113
+[2024-02-29T14:51:13.570+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-02-29T14:51:13.605+0000] {taskinstance.py:3309} INFO - 0 downstream tasks scheduled from follow-on schedule check
