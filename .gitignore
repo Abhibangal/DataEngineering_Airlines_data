@@ -1,2 +1,3 @@
-airflow\logs
-airflow\test.py
+airflow/logs
+airflow/test.py
+venv/
