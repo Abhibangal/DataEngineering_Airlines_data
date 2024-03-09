@@ -26162,3 +26162,4 @@ File Path                                   PID    Runtime      # DAGs    # Erro
 /opt/airflow/dags/welcome_dag.py                                     1           0  1.51s           2024-03-09T06:17:08
 /opt/airflow/dags/AIRLINES_DATA_ETL_DAG.py                           1           0  0.31s           2024-03-09T06:17:33
 ================================================================================
+[2024-03-09T06:17:58.808+0000] {manager.py:451} INFO - Exiting gracefully upon receiving signal 15
