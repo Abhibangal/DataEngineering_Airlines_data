@@ -1,5 +1,5 @@
 MERGE INTO {{ params.database_name }}.{{ params.schema_name }}.OBT_AIRLINES T
-	USING {{ params.database_name }}.{{ params.schema_name }}.AIRLINES_STG S
+	USING (SELECT DISTINCT * FROM {{ params.database_name }}.{{ params.schema_name }}.AIRLINES_STG) S
 		ON T.PASSENGER_ID = S."passenger_id"
 		AND T.DEPARTURE_DT = TO_DATE(S."Departure_Date")
 		AND T.ARRIVAL_AIRPORT = S."Arrival_Airport"
