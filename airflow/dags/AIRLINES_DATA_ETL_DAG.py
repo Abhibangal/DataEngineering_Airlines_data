@@ -1,3 +1,4 @@
+#import all the required libraries for dag creation
 from airflow import DAG
 from airflow.operators.python_operator import PythonOperator
 from airflow.operators.email import EmailOperator

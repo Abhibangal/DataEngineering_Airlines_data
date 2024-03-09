@@ -1,0 +1,154 @@
+[2024-03-09T05:43:25.080+0000] {connection.py:269} WARNING - Connection schemes (type: azure_data_factory) shall not contain '_' according to RFC3986.
+[2024-03-09T05:43:25.083+0000] {base.py:83} INFO - Using connection ID 'azure_data_factory' for task execution.
+[2024-03-09T05:43:25.142+0000] {_universal.py:511} INFO - Request URL: 'https://login.microsoftonline.com/740d81d4-e4d6-4689-8d63-22257ff4a74c/oauth2/v2.0/token'
+Request method: 'POST'
+Request headers:
+    'Content-Type': 'application/x-www-form-urlencoded'
+    'User-Agent': 'azsdk-python-identity/1.15.0 Python/3.11.8 (Linux-5.15.133.1-microsoft-standard-WSL2-x86_64-with-glibc2.36)'
+A body is sent with the request
+[2024-03-09T05:43:25.708+0000] {_universal.py:550} INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-store, no-cache'
+    'Pragma': 'no-cache'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'P3P': 'REDACTED'
+    'x-ms-request-id': '3ee03dec-9c95-4a4c-9f89-6f1f0d110c00'
+    'x-ms-ests-server': 'REDACTED'
+    'X-XSS-Protection': 'REDACTED'
+    'Set-Cookie': 'REDACTED'
+    'Set-Cookie': 'REDACTED'
+    'Set-Cookie': 'REDACTED'
+    'Date': 'Sat, 09 Mar 2024 05:43:25 GMT'
+    'Content-Length': '1387'
+[2024-03-09T05:43:25.713+0000] {get_token_mixin.py:93} INFO - ClientSecretCredential.get_token succeeded
+[2024-03-09T05:43:25.713+0000] {_universal.py:514} INFO - Request URL: 'https://management.azure.com/subscriptions/3958bfc8-c367-4842-ba17-75d61ba036ff/resourceGroups/databricks_course_rg/providers/Microsoft.DataFactory/factories/ADFSQL2ICEBERG/pipelineruns/e8c7f216-ddd7-11ee-95ee-0242ac120002?api-version=REDACTED'
+Request method: 'GET'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': 'f2806914-ddd7-11ee-83df-0242ac120002'
+    'User-Agent': 'azsdk-python-mgmt-datafactory/5.0.0 Python/3.11.8 (Linux-5.15.133.1-microsoft-standard-WSL2-x86_64-with-glibc2.36)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+[2024-03-09T05:43:26.689+0000] {_universal.py:550} INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Content-Length': '786'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-reads': '11999'
+    'x-ms-request-id': '643c32b6-98d5-4879-a037-3f1f50805b26'
+    'x-ms-routing-request-id': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'X-Cache': 'REDACTED'
+    'X-MSEdge-Ref': 'REDACTED'
+    'Date': 'Sat, 09 Mar 2024 05:43:26 GMT'
+[2024-03-09T05:44:26.713+0000] {_universal.py:514} INFO - Request URL: 'https://management.azure.com/subscriptions/3958bfc8-c367-4842-ba17-75d61ba036ff/resourceGroups/databricks_course_rg/providers/Microsoft.DataFactory/factories/ADFSQL2ICEBERG/pipelineruns/e8c7f216-ddd7-11ee-95ee-0242ac120002?api-version=REDACTED'
+Request method: 'GET'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': '17357e66-ddd8-11ee-83df-0242ac120002'
+    'User-Agent': 'azsdk-python-mgmt-datafactory/5.0.0 Python/3.11.8 (Linux-5.15.133.1-microsoft-standard-WSL2-x86_64-with-glibc2.36)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+[2024-03-09T05:44:27.863+0000] {_universal.py:550} INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Content-Length': '786'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-reads': '11999'
+    'x-ms-request-id': '515d701e-758b-447a-aa25-a83bd4b5f50a'
+    'x-ms-routing-request-id': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'X-Cache': 'REDACTED'
+    'X-MSEdge-Ref': 'REDACTED'
+    'Date': 'Sat, 09 Mar 2024 05:44:27 GMT'
+[2024-03-09T05:45:27.806+0000] {_universal.py:514} INFO - Request URL: 'https://management.azure.com/subscriptions/3958bfc8-c367-4842-ba17-75d61ba036ff/resourceGroups/databricks_course_rg/providers/Microsoft.DataFactory/factories/ADFSQL2ICEBERG/pipelineruns/e8c7f216-ddd7-11ee-95ee-0242ac120002?api-version=REDACTED'
+Request method: 'GET'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': '3b9f9eee-ddd8-11ee-83df-0242ac120002'
+    'User-Agent': 'azsdk-python-mgmt-datafactory/5.0.0 Python/3.11.8 (Linux-5.15.133.1-microsoft-standard-WSL2-x86_64-with-glibc2.36)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+[2024-03-09T05:45:28.772+0000] {_universal.py:550} INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Content-Length': '786'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-reads': '11999'
+    'x-ms-request-id': '7b39990b-feb4-43de-8a60-78c44e73ae59'
+    'x-ms-routing-request-id': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'X-Cache': 'REDACTED'
+    'X-MSEdge-Ref': 'REDACTED'
+    'Date': 'Sat, 09 Mar 2024 05:45:27 GMT'
+[2024-03-09T05:46:28.826+0000] {_universal.py:514} INFO - Request URL: 'https://management.azure.com/subscriptions/3958bfc8-c367-4842-ba17-75d61ba036ff/resourceGroups/databricks_course_rg/providers/Microsoft.DataFactory/factories/ADFSQL2ICEBERG/pipelineruns/e8c7f216-ddd7-11ee-95ee-0242ac120002?api-version=REDACTED'
+Request method: 'GET'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': '5ffe9ae2-ddd8-11ee-83df-0242ac120002'
+    'User-Agent': 'azsdk-python-mgmt-datafactory/5.0.0 Python/3.11.8 (Linux-5.15.133.1-microsoft-standard-WSL2-x86_64-with-glibc2.36)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+[2024-03-09T05:46:29.782+0000] {_universal.py:550} INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Content-Length': '786'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-reads': '11999'
+    'x-ms-request-id': '85f8ec51-7b3b-4928-9e77-7bf64520a94d'
+    'x-ms-routing-request-id': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'X-Cache': 'REDACTED'
+    'X-MSEdge-Ref': 'REDACTED'
+    'Date': 'Sat, 09 Mar 2024 05:46:29 GMT'
+[2024-03-09T05:47:29.795+0000] {_universal.py:514} INFO - Request URL: 'https://management.azure.com/subscriptions/3958bfc8-c367-4842-ba17-75d61ba036ff/resourceGroups/databricks_course_rg/providers/Microsoft.DataFactory/factories/ADFSQL2ICEBERG/pipelineruns/e8c7f216-ddd7-11ee-95ee-0242ac120002?api-version=REDACTED'
+Request method: 'GET'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': '8455bd9e-ddd8-11ee-83df-0242ac120002'
+    'User-Agent': 'azsdk-python-mgmt-datafactory/5.0.0 Python/3.11.8 (Linux-5.15.133.1-microsoft-standard-WSL2-x86_64-with-glibc2.36)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+[2024-03-09T05:47:30.753+0000] {_universal.py:550} INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Content-Length': '811'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-reads': '11999'
+    'x-ms-request-id': '8ddd0443-296d-4f72-9e7a-d15c308b6aaa'
+    'x-ms-routing-request-id': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'X-Cache': 'REDACTED'
+    'X-MSEdge-Ref': 'REDACTED'
+    'Date': 'Sat, 09 Mar 2024 05:47:30 GMT'
+[2024-03-09T05:47:30.757+0000] {triggerer_job_runner.py:602} INFO - Trigger AIRLINES_ETL_PIPELINE/manual__2024-03-09T05:42:35.359872+00:00/ADF_pipeline_status/-1/1 (ID 1) fired: TriggerEvent<{'status': 'success', 'message': 'Pipeline run e8c7f216-ddd7-11ee-95ee-0242ac120002 has been Succeeded.'}>
+[2024-03-09T05:47:30.766+0000] {base_events.py:1785} ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x7f4ea83112d0>
+[2024-03-09T05:47:30.768+0000] {base_events.py:1785} ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x7f4ea835c670>, 829.793729076)]']
+connector: <aiohttp.connector.TCPConnector object at 0x7f4ebf03a450>
+[2024-03-09T05:47:30.769+0000] {base_events.py:1785} ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x7f4ea8312510>

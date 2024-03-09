@@ -1,0 +1,73 @@
+[2024-03-07T12:39:40.523+0000] {processor.py:161} INFO - Started process (PID=56) to work on /opt/airflow/dags/AIRLINES_DATA_ETL_DAG.py
+[2024-03-07T12:39:40.532+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/AIRLINES_DATA_ETL_DAG.py for tasks to queue
+[2024-03-07T12:39:40.554+0000] {logging_mixin.py:188} INFO - [2024-03-07T12:39:40.552+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/AIRLINES_DATA_ETL_DAG.py
+[2024-03-07T12:39:40.694+0000] {logging_mixin.py:188} INFO - [2024-03-07T12:39:40.674+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/AIRLINES_DATA_ETL_DAG.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/AIRLINES_DATA_ETL_DAG.py", line 59, in <module>
+    Check_for_airlines_file = WasbBlobSensor(
+                              ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/providers/microsoft/azure/sensors/wasb.py", line 61, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/sensors/base.py", line 147, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to WasbBlobSensor (task_id: Check_for_airlines_file). Invalid arguments were:
+**kwargs: {'poke': 30}
+[2024-03-07T12:39:40.704+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/AIRLINES_DATA_ETL_DAG.py
+[2024-03-07T12:39:41.174+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/AIRLINES_DATA_ETL_DAG.py took 0.702 seconds
+[2024-03-07T12:39:45.053+0000] {processor.py:161} INFO - Started process (PID=65) to work on /opt/airflow/dags/AIRLINES_DATA_ETL_DAG.py
+[2024-03-07T12:39:45.054+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/AIRLINES_DATA_ETL_DAG.py for tasks to queue
+[2024-03-07T12:39:45.057+0000] {logging_mixin.py:188} INFO - [2024-03-07T12:39:45.057+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/AIRLINES_DATA_ETL_DAG.py
+[2024-03-07T12:39:45.536+0000] {processor.py:840} INFO - DAG(s) 'AIRLINES_ETL_PIPELINE' retrieved from /opt/airflow/dags/AIRLINES_DATA_ETL_DAG.py
+[2024-03-07T12:39:46.292+0000] {logging_mixin.py:188} INFO - [2024-03-07T12:39:46.289+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-03-07T12:39:46.409+0000] {logging_mixin.py:188} INFO - [2024-03-07T12:39:46.409+0000] {dag.py:3834} INFO - Setting next_dagrun for AIRLINES_ETL_PIPELINE to 2024-03-28 12:00:00+00:00, run_after=2024-04-28 12:00:00+00:00
+[2024-03-07T12:39:47.084+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/AIRLINES_DATA_ETL_DAG.py took 2.100 seconds
+[2024-03-07T12:40:29.148+0000] {processor.py:161} INFO - Started process (PID=55) to work on /opt/airflow/dags/AIRLINES_DATA_ETL_DAG.py
+[2024-03-07T12:40:29.150+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/AIRLINES_DATA_ETL_DAG.py for tasks to queue
+[2024-03-07T12:40:29.152+0000] {logging_mixin.py:188} INFO - [2024-03-07T12:40:29.152+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/AIRLINES_DATA_ETL_DAG.py
+[2024-03-07T12:40:29.281+0000] {processor.py:840} INFO - DAG(s) 'AIRLINES_ETL_PIPELINE' retrieved from /opt/airflow/dags/AIRLINES_DATA_ETL_DAG.py
+[2024-03-07T12:40:29.321+0000] {logging_mixin.py:188} INFO - [2024-03-07T12:40:29.321+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-03-07T12:40:29.360+0000] {logging_mixin.py:188} INFO - [2024-03-07T12:40:29.360+0000] {dag.py:3834} INFO - Setting next_dagrun for AIRLINES_ETL_PIPELINE to 2024-03-28 12:00:00+00:00, run_after=2024-04-28 12:00:00+00:00
+[2024-03-07T12:40:29.457+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/AIRLINES_DATA_ETL_DAG.py took 0.314 seconds
+[2024-03-07T12:41:00.820+0000] {processor.py:161} INFO - Started process (PID=66) to work on /opt/airflow/dags/AIRLINES_DATA_ETL_DAG.py
+[2024-03-07T12:41:00.834+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/AIRLINES_DATA_ETL_DAG.py for tasks to queue
+[2024-03-07T12:41:00.864+0000] {logging_mixin.py:188} INFO - [2024-03-07T12:41:00.862+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/AIRLINES_DATA_ETL_DAG.py
+[2024-03-07T12:41:02.197+0000] {processor.py:840} INFO - DAG(s) 'AIRLINES_ETL_PIPELINE' retrieved from /opt/airflow/dags/AIRLINES_DATA_ETL_DAG.py
+[2024-03-07T12:41:03.543+0000] {logging_mixin.py:188} INFO - [2024-03-07T12:41:03.535+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-03-07T12:41:03.869+0000] {logging_mixin.py:188} INFO - [2024-03-07T12:41:03.868+0000] {dag.py:3834} INFO - Setting next_dagrun for AIRLINES_ETL_PIPELINE to 2024-03-28 12:00:00+00:00, run_after=2024-04-28 12:00:00+00:00
+[2024-03-07T12:41:04.182+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/AIRLINES_DATA_ETL_DAG.py took 3.425 seconds
+[2024-03-07T12:41:35.249+0000] {processor.py:161} INFO - Started process (PID=78) to work on /opt/airflow/dags/AIRLINES_DATA_ETL_DAG.py
+[2024-03-07T12:41:35.269+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/AIRLINES_DATA_ETL_DAG.py for tasks to queue
+[2024-03-07T12:41:35.276+0000] {logging_mixin.py:188} INFO - [2024-03-07T12:41:35.273+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/AIRLINES_DATA_ETL_DAG.py
+[2024-03-07T12:41:35.765+0000] {processor.py:840} INFO - DAG(s) 'AIRLINES_ETL_PIPELINE' retrieved from /opt/airflow/dags/AIRLINES_DATA_ETL_DAG.py
+[2024-03-07T12:41:35.832+0000] {logging_mixin.py:188} INFO - [2024-03-07T12:41:35.831+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-03-07T12:41:35.886+0000] {logging_mixin.py:188} INFO - [2024-03-07T12:41:35.885+0000] {dag.py:3834} INFO - Setting next_dagrun for AIRLINES_ETL_PIPELINE to 2024-03-28 12:00:00+00:00, run_after=2024-04-28 12:00:00+00:00
+[2024-03-07T12:41:35.990+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/AIRLINES_DATA_ETL_DAG.py took 0.786 seconds
+[2024-03-07T12:42:06.196+0000] {processor.py:161} INFO - Started process (PID=80) to work on /opt/airflow/dags/AIRLINES_DATA_ETL_DAG.py
+[2024-03-07T12:42:06.205+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/AIRLINES_DATA_ETL_DAG.py for tasks to queue
+[2024-03-07T12:42:06.218+0000] {logging_mixin.py:188} INFO - [2024-03-07T12:42:06.215+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/AIRLINES_DATA_ETL_DAG.py
+[2024-03-07T12:42:06.908+0000] {processor.py:840} INFO - DAG(s) 'AIRLINES_ETL_PIPELINE' retrieved from /opt/airflow/dags/AIRLINES_DATA_ETL_DAG.py
+[2024-03-07T12:42:07.000+0000] {logging_mixin.py:188} INFO - [2024-03-07T12:42:06.999+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-03-07T12:42:07.310+0000] {logging_mixin.py:188} INFO - [2024-03-07T12:42:07.310+0000] {dag.py:3834} INFO - Setting next_dagrun for AIRLINES_ETL_PIPELINE to 2024-03-28 12:00:00+00:00, run_after=2024-04-28 12:00:00+00:00
+[2024-03-07T12:42:07.442+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/AIRLINES_DATA_ETL_DAG.py took 1.262 seconds
+[2024-03-07T12:42:38.246+0000] {processor.py:161} INFO - Started process (PID=82) to work on /opt/airflow/dags/AIRLINES_DATA_ETL_DAG.py
+[2024-03-07T12:42:38.247+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/AIRLINES_DATA_ETL_DAG.py for tasks to queue
+[2024-03-07T12:42:38.249+0000] {logging_mixin.py:188} INFO - [2024-03-07T12:42:38.249+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/AIRLINES_DATA_ETL_DAG.py
+[2024-03-07T12:42:38.390+0000] {processor.py:840} INFO - DAG(s) 'AIRLINES_ETL_PIPELINE' retrieved from /opt/airflow/dags/AIRLINES_DATA_ETL_DAG.py
+[2024-03-07T12:42:38.433+0000] {logging_mixin.py:188} INFO - [2024-03-07T12:42:38.432+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-03-07T12:42:38.578+0000] {logging_mixin.py:188} INFO - [2024-03-07T12:42:38.577+0000] {dag.py:3834} INFO - Setting next_dagrun for AIRLINES_ETL_PIPELINE to 2024-03-28 12:00:00+00:00, run_after=2024-04-28 12:00:00+00:00
+[2024-03-07T12:42:38.971+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/AIRLINES_DATA_ETL_DAG.py took 0.728 seconds

@@ -1,0 +1,103 @@
+[2024-03-09T05:43:19.644+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: AIRLINES_ETL_PIPELINE.ADF_pipeline_status manual__2024-03-09T05:42:35.359872+00:00 [queued]>
+[2024-03-09T05:43:19.657+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: AIRLINES_ETL_PIPELINE.ADF_pipeline_status manual__2024-03-09T05:42:35.359872+00:00 [queued]>
+[2024-03-09T05:43:19.658+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-03-09T05:43:19.716+0000] {taskinstance.py:2214} INFO - Executing <Task(AzureDataFactoryPipelineRunStatusSensor): ADF_pipeline_status> on 2024-03-09 05:42:35.359872+00:00
+[2024-03-09T05:43:19.750+0000] {standard_task_runner.py:60} INFO - Started process 135 to run task
+[2024-03-09T05:43:19.755+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'AIRLINES_ETL_PIPELINE', 'ADF_pipeline_status', 'manual__2024-03-09T05:42:35.359872+00:00', '--job-id', '152', '--raw', '--subdir', 'DAGS_FOLDER/AIRLINES_DATA_ETL_DAG.py', '--cfg-path', '/tmp/tmppkl82j97']
+[2024-03-09T05:43:19.758+0000] {standard_task_runner.py:88} INFO - Job 152: Subtask ADF_pipeline_status
+[2024-03-09T05:43:19.927+0000] {task_command.py:423} INFO - Running <TaskInstance: AIRLINES_ETL_PIPELINE.ADF_pipeline_status manual__2024-03-09T05:42:35.359872+00:00 [running]> on host 7cd033267706
+[2024-03-09T05:43:20.436+0000] {taskinstance.py:2510} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='abhijit.bangal92@gmail.com' AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='AIRLINES_ETL_PIPELINE' AIRFLOW_CTX_TASK_ID='ADF_pipeline_status' AIRFLOW_CTX_EXECUTION_DATE='2024-03-09T05:42:35.359872+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-03-09T05:42:35.359872+00:00'
+[2024-03-09T05:43:20.437+0000] {data_factory.py:804} INFO - Getting the status of run ID e8c7f216-ddd7-11ee-95ee-0242ac120002.
+[2024-03-09T05:43:20.450+0000] {connection.py:269} WARNING - Connection schemes (type: azure_data_factory) shall not contain '_' according to RFC3986.
+[2024-03-09T05:43:20.452+0000] {base.py:83} INFO - Using connection ID 'azure_data_factory' for task execution.
+[2024-03-09T05:43:20.457+0000] {_universal.py:514} INFO - Request URL: 'https://login.microsoftonline.com/740d81d4-e4d6-4689-8d63-22257ff4a74c/v2.0/.well-known/openid-configuration'
+Request method: 'GET'
+Request headers:
+    'User-Agent': 'azsdk-python-identity/1.15.0 Python/3.11.8 (Linux-5.15.133.1-microsoft-standard-WSL2-x86_64-with-glibc2.36)'
+No body was attached to the request
+[2024-03-09T05:43:20.766+0000] {_universal.py:550} INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'max-age=86400, private'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'Access-Control-Allow-Origin': 'REDACTED'
+    'Access-Control-Allow-Methods': 'REDACTED'
+    'P3P': 'REDACTED'
+    'x-ms-request-id': 'b281d283-ec7c-419a-be77-2e075f553200'
+    'x-ms-ests-server': 'REDACTED'
+    'X-XSS-Protection': 'REDACTED'
+    'Set-Cookie': 'REDACTED'
+    'Date': 'Sat, 09 Mar 2024 05:43:19 GMT'
+    'Content-Length': '1753'
+[2024-03-09T05:43:20.773+0000] {_universal.py:511} INFO - Request URL: 'https://login.microsoftonline.com/740d81d4-e4d6-4689-8d63-22257ff4a74c/oauth2/v2.0/token'
+Request method: 'POST'
+Request headers:
+    'Accept': 'application/json'
+    'x-client-sku': 'REDACTED'
+    'x-client-ver': 'REDACTED'
+    'x-client-os': 'REDACTED'
+    'x-ms-lib-capability': 'REDACTED'
+    'client-request-id': 'REDACTED'
+    'x-client-current-telemetry': 'REDACTED'
+    'x-client-last-telemetry': 'REDACTED'
+    'User-Agent': 'azsdk-python-identity/1.15.0 Python/3.11.8 (Linux-5.15.133.1-microsoft-standard-WSL2-x86_64-with-glibc2.36)'
+A body is sent with the request
+[2024-03-09T05:43:20.965+0000] {_universal.py:550} INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-store, no-cache'
+    'Pragma': 'no-cache'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'P3P': 'REDACTED'
+    'client-request-id': 'REDACTED'
+    'x-ms-request-id': '6882ec5b-d671-4b57-8cb5-d79723812b00'
+    'x-ms-ests-server': 'REDACTED'
+    'x-ms-clitelem': 'REDACTED'
+    'X-XSS-Protection': 'REDACTED'
+    'Set-Cookie': 'REDACTED'
+    'Date': 'Sat, 09 Mar 2024 05:43:20 GMT'
+    'Content-Length': '1387'
+[2024-03-09T05:43:20.967+0000] {get_token_mixin.py:93} INFO - ClientSecretCredential.get_token succeeded
+[2024-03-09T05:43:20.969+0000] {_universal.py:514} INFO - Request URL: 'https://management.azure.com/subscriptions/3958bfc8-c367-4842-ba17-75d61ba036ff/resourceGroups/databricks_course_rg/providers/Microsoft.DataFactory/factories/ADFSQL2ICEBERG/pipelineruns/e8c7f216-ddd7-11ee-95ee-0242ac120002?api-version=REDACTED'
+Request method: 'GET'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': 'efb7b688-ddd7-11ee-b37b-0242ac120002'
+    'User-Agent': 'azsdk-python-mgmt-datafactory/5.0.0 Python/3.11.8 (Linux-5.15.133.1-microsoft-standard-WSL2-x86_64-with-glibc2.36)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+[2024-03-09T05:43:21.910+0000] {_universal.py:550} INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Content-Length': '786'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-reads': '11999'
+    'x-ms-request-id': 'ec417eb4-af34-4716-8461-edc4fd514e28'
+    'x-ms-routing-request-id': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'X-Cache': 'REDACTED'
+    'X-MSEdge-Ref': 'REDACTED'
+    'Date': 'Sat, 09 Mar 2024 05:43:21 GMT'
+[2024-03-09T05:43:21.917+0000] {data_factory.py:806} INFO - Current status of pipeline run e8c7f216-ddd7-11ee-95ee-0242ac120002: InProgress
+[2024-03-09T05:43:21.934+0000] {taskinstance.py:2367} INFO - Pausing task as DEFERRED. dag_id=AIRLINES_ETL_PIPELINE, task_id=ADF_pipeline_status, execution_date=20240309T054235, start_date=20240309T054319
+[2024-03-09T05:43:22.018+0000] {local_task_job_runner.py:231} INFO - Task exited with return code 100 (task deferral)
+[2024-03-09T05:47:37.698+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: AIRLINES_ETL_PIPELINE.ADF_pipeline_status manual__2024-03-09T05:42:35.359872+00:00 [queued]>
+[2024-03-09T05:47:37.728+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: AIRLINES_ETL_PIPELINE.ADF_pipeline_status manual__2024-03-09T05:42:35.359872+00:00 [queued]>
+[2024-03-09T05:47:37.728+0000] {taskinstance.py:2191} INFO - Resuming after deferral
+[2024-03-09T05:47:37.807+0000] {taskinstance.py:2214} INFO - Executing <Task(AzureDataFactoryPipelineRunStatusSensor): ADF_pipeline_status> on 2024-03-09 05:42:35.359872+00:00
+[2024-03-09T05:47:37.818+0000] {standard_task_runner.py:60} INFO - Started process 165 to run task
+[2024-03-09T05:47:37.824+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'AIRLINES_ETL_PIPELINE', 'ADF_pipeline_status', 'manual__2024-03-09T05:42:35.359872+00:00', '--job-id', '153', '--raw', '--subdir', 'DAGS_FOLDER/AIRLINES_DATA_ETL_DAG.py', '--cfg-path', '/tmp/tmpy06glgl8']
+[2024-03-09T05:47:37.827+0000] {standard_task_runner.py:88} INFO - Job 153: Subtask ADF_pipeline_status
+[2024-03-09T05:47:38.077+0000] {task_command.py:423} INFO - Running <TaskInstance: AIRLINES_ETL_PIPELINE.ADF_pipeline_status manual__2024-03-09T05:42:35.359872+00:00 [running]> on host 7cd033267706
+[2024-03-09T05:47:40.771+0000] {data_factory.py:137} INFO - Pipeline run e8c7f216-ddd7-11ee-95ee-0242ac120002 has been Succeeded.
+[2024-03-09T05:47:40.781+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=AIRLINES_ETL_PIPELINE, task_id=ADF_pipeline_status, execution_date=20240309T054235, start_date=20240309T054319, end_date=20240309T054740
+[2024-03-09T05:47:40.890+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-03-09T05:47:40.910+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.11/site-packages/airflow/models/baseoperator.py:1201 AirflowProviderDeprecationWarning: Call to deprecated class SnowflakeOperator. (This class is deprecated. Please use `airflow.providers.common.sql.operators.sql.SQLExecuteQueryOperator`. Also, you can provide `hook_params={'warehouse': <warehouse>, 'database': <database>, 'role': <role>, 'schema': <schema>, 'authenticator': <authenticator>,'session_parameters': <session_parameters>}`.)
+[2024-03-09T05:47:40.953+0000] {taskinstance.py:3309} INFO - 1 downstream tasks scheduled from follow-on schedule check
